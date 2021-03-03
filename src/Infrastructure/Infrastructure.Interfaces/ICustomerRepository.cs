@@ -12,9 +12,9 @@ namespace SeidorArchitecture.ECommerce.Infrastructure.Interfaces
 
         bool Update(Customer customer);
 
-        bool Delete(string customerId);
+        bool Delete(string dni);
 
-        Customer Get(string customerId);
+        Customer Get(string dni);
 
         IEnumerable<Customer> GetAll();
 
@@ -25,9 +25,9 @@ namespace SeidorArchitecture.ECommerce.Infrastructure.Interfaces
 
         Task<bool> UpdateAsync(Customer customer);
 
-        Task<bool> DeleteAsync(string customerId);
+        Task<bool> DeleteAsync(string dni);
 
-        Task<Customer> GetAsync(string customerId);
+        Task<Customer> GetAsync(string dni);
 
         Task<IEnumerable<Customer>> GetAllAsync();
 

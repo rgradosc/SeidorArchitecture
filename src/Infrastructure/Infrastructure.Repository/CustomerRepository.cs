@@ -24,7 +24,7 @@ namespace SeidorArchitecture.ECommerce.Infrastructure.Repository
                 var p = new DynamicParameters();
                 p.Add("@DNI", dni);
 
-                var result = connection.Execute("CustomersDelete", param: p, commandType: CommandType.StoredProcedure);
+                var result = connection.Execute("dbo.CustomersDelete", param: p, commandType: CommandType.StoredProcedure);
 
                 return result > 0;
             }
@@ -37,7 +37,7 @@ namespace SeidorArchitecture.ECommerce.Infrastructure.Repository
                 var p = new DynamicParameters();
                 p.Add("@DNI", dni);
 
-                var result = await connection.ExecuteAsync("CustomersDelete", param: p, commandType: CommandType.StoredProcedure);
+                var result = await connection.ExecuteAsync("dbo.CustomersDelete", param: p, commandType: CommandType.StoredProcedure);
 
                 return result > 0;
             }
@@ -50,7 +50,7 @@ namespace SeidorArchitecture.ECommerce.Infrastructure.Repository
                 var p = new DynamicParameters();
                 p.Add("@DNI", dni);
                 
-                var customer = connection.QuerySingle<Customer>("CustomersGetByDNI", param: p, commandType: CommandType.StoredProcedure);
+                var customer = connection.QuerySingle<Customer>("dbo.CustomersGetByDNI", param: p, commandType: CommandType.StoredProcedure);
 
                 return customer;
             }
@@ -63,7 +63,7 @@ namespace SeidorArchitecture.ECommerce.Infrastructure.Repository
                 var p = new DynamicParameters();
                 p.Add("@DNI", dni);
 
-                var customer = await connection.QuerySingleAsync<Customer>("CustomersGetByDNI", param: p, commandType: CommandType.StoredProcedure);
+                var customer = await connection.QuerySingleAsync<Customer>("dbo.CustomersGetByDNI", param: p, commandType: CommandType.StoredProcedure);
 
                 return customer;
             }
@@ -74,7 +74,7 @@ namespace SeidorArchitecture.ECommerce.Infrastructure.Repository
             using (var connection = connectionFactory.GetDbConnection)
             {
 
-                var customers = connection.Query<Customer>("CustomersList", commandType: CommandType.StoredProcedure);
+                var customers = connection.Query<Customer>("dbo.CustomersList", commandType: CommandType.StoredProcedure);
 
                 return customers;
             }
@@ -85,7 +85,7 @@ namespace SeidorArchitecture.ECommerce.Infrastructure.Repository
             using (var connection = connectionFactory.GetDbConnection)
             {
 
-                var customers = await connection.QueryAsync<Customer>("CustomersList", commandType: CommandType.StoredProcedure);
+                var customers = await connection.QueryAsync<Customer>("dbo.CustomersList", commandType: CommandType.StoredProcedure);
 
                 return customers;
             }
@@ -102,7 +102,7 @@ namespace SeidorArchitecture.ECommerce.Infrastructure.Repository
                 p.Add("@Saldo", customer.Saldo);
                 p.Add("@Puntos", customer.Puntos);
                 
-                var result = connection.Execute("CustomersInsert", param: p, commandType: CommandType.StoredProcedure);
+                var result = connection.Execute("dbo.CustomersInsert", param: p, commandType: CommandType.StoredProcedure);
 
                 return result > 0;
             }
@@ -119,7 +119,7 @@ namespace SeidorArchitecture.ECommerce.Infrastructure.Repository
                 p.Add("@Saldo", customer.Saldo);
                 p.Add("@Puntos", customer.Puntos);
 
-                var result = await connection.ExecuteAsync("CustomersInsert", param: p, commandType: CommandType.StoredProcedure);
+                var result = await connection.ExecuteAsync("dbo.CustomersInsert", param: p, commandType: CommandType.StoredProcedure);
 
                 return result > 0;
             }
@@ -131,12 +131,10 @@ namespace SeidorArchitecture.ECommerce.Infrastructure.Repository
             {
                 var p = new DynamicParameters();
                 p.Add("@DNI", customer.DNI);
-                p.Add("@Cliente", customer.Cliente);
-                p.Add("@FechaNacimiento", customer.FechaNacimiento);
                 p.Add("@Saldo", customer.Saldo);
                 p.Add("@Puntos", customer.Puntos);
 
-                var result = connection.Execute("CustomersUpdate", param: p, commandType: CommandType.StoredProcedure);
+                var result = connection.Execute("dbo.CustomersUpdate", param: p, commandType: CommandType.StoredProcedure);
 
                 return result > 0;
             }
@@ -153,7 +151,7 @@ namespace SeidorArchitecture.ECommerce.Infrastructure.Repository
                 p.Add("@Saldo", customer.Saldo);
                 p.Add("@Puntos", customer.Puntos);
 
-                var result = await connection.ExecuteAsync("CustomersUpdate", param: p, commandType: CommandType.StoredProcedure);
+                var result = await connection.ExecuteAsync("dbo.CustomersUpdate", param: p, commandType: CommandType.StoredProcedure);
 
                 return result > 0;
             }

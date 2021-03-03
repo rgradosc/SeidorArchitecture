@@ -1,16 +1,11 @@
 ﻿using SeidorArchitecture.ECommerce.Application.DTO;
 using SeidorArchitecture.ECommerce.Application.Interfaces;
-
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace Services.WebAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/")]
     [ApiController]
     public class CustomersController : ControllerBase
     {
@@ -21,8 +16,7 @@ namespace Services.WebAPI.Controllers
             this.application = application;
         }
 
-
-        [HttpGet]
+        [HttpGet("get")]
         public IActionResult Get()
         {
             var response = application.GetAll();
@@ -35,15 +29,15 @@ namespace Services.WebAPI.Controllers
             return BadRequest(response.Message);
         }
 
-        [HttpGet("{customerId}")]
-        public IActionResult Get(string customerId)
+        [HttpGet("get/{dni}")]
+        public IActionResult Get(string dni)
         {
-            if (string.IsNullOrWhiteSpace(customerId))
+            if (string.IsNullOrWhiteSpace(dni))
             {
                 return BadRequest();
             }
 
-            var response = application.Get(customerId);
+            var response = application.Get(dni);
 
             if (response.IsSuccess)
             {
@@ -53,15 +47,15 @@ namespace Services.WebAPI.Controllers
             return BadRequest(response.Message);
         }
 
-        [HttpPost]
-        public IActionResult Post([FromBody] CustomerDTO customerDTO)
+        [HttpPost("post")]
+        public IActionResult Post([FromBody] AddCustomerDTO addCustomerDTO)
         {
-            if (customerDTO == null)
+            if (addCustomerDTO == null)
             {
                 return BadRequest();
             }
 
-            var response = application.Insert(customerDTO);
+            var response = application.Insert(addCustomerDTO);
 
             if (response.IsSuccess)
             {
@@ -71,15 +65,15 @@ namespace Services.WebAPI.Controllers
             return BadRequest(response.Message);
         }
 
-        [HttpPut]
-        public IActionResult Put([FromBody] CustomerDTO customerDTO)
+        [HttpPut("put")]
+        public IActionResult Put([FromBody] CreditCustomerDTO creditCustomerDTO)
         {
-            if (customerDTO == null)
+            if (creditCustomerDTO == null)
             {
                 return BadRequest();
             }
 
-            var response = application.Update(customerDTO);
+            var response = application.Update(creditCustomerDTO);
 
             if (response.IsSuccess)
             {
@@ -89,15 +83,15 @@ namespace Services.WebAPI.Controllers
             return BadRequest(response.Message);
         }
 
-        [HttpDelete("{customerId}")]
-        public IActionResult Delete(string customerId)
+        [HttpDelete("delete/{dni}")]
+        public IActionResult Delete(string dni)
         {
-            if (string.IsNullOrWhiteSpace(customerId))
+            if (string.IsNullOrWhiteSpace(dni))
             {
                 return BadRequest();
             }
 
-            var response = application.Delete(customerId);
+            var response = application.Delete(dni);
 
             if (response.IsSuccess)
             {
@@ -107,7 +101,7 @@ namespace Services.WebAPI.Controllers
             return BadRequest(response.Message);
         }
 
-        [HttpGet]
+        [HttpGet("getAsync")]
         public async Task<IActionResult> GetAsync()
         {
             var response = await application.GetAllAsync();
@@ -120,15 +114,15 @@ namespace Services.WebAPI.Controllers
             return BadRequest(response.Message);
         }
 
-        [HttpGet("{customerId}")]
-        public async Task<IActionResult> GetAsync(string customerId)
+        [HttpGet("getAsync/{dni}")]
+        public async Task<IActionResult> GetAsync(string dni)
         {
-            if (string.IsNullOrWhiteSpace(customerId))
+            if (string.IsNullOrWhiteSpace(dni))
             {
-                return BadRequest(customerId);
+                return BadRequest(dni);
             }
 
-            var response = await application.GetAsync(customerId);
+            var response = await application.GetAsync(dni);
 
             if (response.IsSuccess)
             {
@@ -138,15 +132,15 @@ namespace Services.WebAPI.Controllers
             return BadRequest(response.Message);
         }
 
-        [HttpPost]
-        public async Task<IActionResult> PostAsync([FromBody] CustomerDTO customerDTO)
+        [HttpPost("postAsync")]
+        public async Task<IActionResult> PostAsync([FromBody] AddCustomerDTO addCustomerDTO)
         {
-            if (customerDTO == null)
+            if (addCustomerDTO == null)
             {
                 return BadRequest();
             }
 
-            var response = await application.InsertAsync(customerDTO);
+            var response = await application.InsertAsync(addCustomerDTO);
 
             if (response.IsSuccess)
             {
@@ -156,15 +150,15 @@ namespace Services.WebAPI.Controllers
             return BadRequest(response.Message);
         }
 
-        [HttpPut]
-        public async Task<IActionResult> PutAsync([FromBody] CustomerDTO customerDTO)
+        [HttpPut("putAsync")]
+        public async Task<IActionResult> PutAsync([FromBody] CreditCustomerDTO creditCustomerDTO)
         {
-            if (customerDTO == null)
+            if (creditCustomerDTO == null)
             {
                 return BadRequest();
             }
 
-            var response = await application.UpdateAsync(customerDTO);
+            var response = await application.UpdateAsync(creditCustomerDTO);
 
             if (response.IsSuccess)
             {
@@ -174,15 +168,15 @@ namespace Services.WebAPI.Controllers
             return BadRequest(response.Message);
         }
 
-        [HttpDelete("{customerId}")]
-        public async Task<IActionResult> DeleteAsync(string customerId)
+        [HttpDelete("deleteAsync/{dni}")]
+        public async Task<IActionResult> DeleteAsync(string dni)
         {
-            if (string.IsNullOrWhiteSpace(customerId))
+            if (string.IsNullOrWhiteSpace(dni))
             {
                 return BadRequest();
             }
 
-            var response = await application.DeleteAsync(customerId);
+            var response = await application.DeleteAsync(dni);
 
             if (response.IsSuccess)
             {

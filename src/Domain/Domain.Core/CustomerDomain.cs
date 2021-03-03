@@ -64,17 +64,48 @@ namespace SeidorArchitecture.ECommerce.Domain.Core
 
         public async Task<bool> InsertAsync(Customer customer)
         {
+            var edad = DateTime.Now.Year - customer.FechaNacimiento.Year;
+
+            if (edad <= 40)
+            {
+                customer.Puntos = 1000;
+            }
+            else
+            {
+                customer.Puntos = 100;
+            }
+
             return await repository.InsertAsync(customer);
         }
 
         public bool Update(Customer customer)
         {
-            return repository.Update(customer);
+            var customerStored = repository.Get(customer.DNI);
+
+            if (customerStored != null)
+            {
+                customer.Saldo += customerStored.Saldo;
+                customer.Puntos += customerStored.Puntos;
+
+                return repository.Update(customer);
+            }
+
+            return false;
         }
 
         public async Task<bool> UpdateAsync(Customer customer)
         {
-            return await repository.UpdateAsync(customer);
+            var customerStored = await repository.GetAsync(customer.DNI);
+
+            if (customerStored != null)
+            {
+                customer.Saldo += customerStored.Saldo;
+                customer.Puntos += customerStored.Puntos;
+
+                return await repository.UpdateAsync(customer);
+            }
+
+            return false;
         }
     }
 }

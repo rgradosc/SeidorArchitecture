@@ -19,6 +19,7 @@
     <ProjectReference Include="..\..\Domain\Domain.Interfaces\Domain.Interfaces.csproj" />
     <ProjectReference Include="..\..\Infrastructure\Infrastructure.Data\Infrastructure.Data.csproj" />
     <ProjectReference Include="..\..\Infrastructure\Infrastructure.Repository\Infrastructure.Repository.csproj" />
+    <ProjectReference Include="..\..\Transversal\Transversal.Mapper\Transversal.Mapper.csproj" />
   </ItemGroup>
 
 

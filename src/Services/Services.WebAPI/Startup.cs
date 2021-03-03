@@ -13,6 +13,7 @@ using SeidorArchitecture.ECommerce.Infrastructure.Data;
 using SeidorArchitecture.ECommerce.Infrastructure.Interfaces;
 using SeidorArchitecture.ECommerce.Infrastructure.Repository;
 using SeidorArchitecture.ECommerce.Transversal.Common;
+using SeidorArchitecture.ECommerce.Transversal.Mapper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,7 +33,7 @@ namespace Services.WebAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddAutoMapper(typeof(Startup));
+            services.AddAutoMapper(x => x.AddProfile(new AutoMapperProfile()));
 
             services.AddSingleton<IConfiguration>(Configuration);
 
