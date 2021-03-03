@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[Customers]
+(
+	[DNI] VARCHAR(9) NOT NULL PRIMARY KEY,
+	[Cliente] VARCHAR(120) NOT NULL, 
+    [FechaNacimiento] DATETIME2 NOT NULL, 
+    [Saldo] MONEY NOT NULL DEFAULT 0, 
+    [Puntos] INT NOT NULL DEFAULT 0
+)
