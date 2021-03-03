@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>SeidorArchitecture.ECommerce.Domain.Core</AssemblyName>
+    <RootNamespace>SeidorArchitecture.ECommerce.Domain.Core</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Infrastructure\Infrastructure.Interfaces\Infrastructure.Interfaces.csproj" />
+    <ProjectReference Include="..\Domain.Entity\Domain.Entity.csproj" />
+    <ProjectReference Include="..\Domain.Interfaces\Domain.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>
