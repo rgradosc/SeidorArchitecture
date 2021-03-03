@@ -1,15 +1,13 @@
 ﻿CREATE PROCEDURE [dbo].[CustomersUpdate]
 	@DNI VARCHAR(9),
-	@Cliente VARCHAR(120),
-	@FechaNacimiento datetime,
 	@Saldo money,
 	@Puntos int
 AS
-	set nocount on;
+BEGIN
 	update dbo.[Customers]
-	set Cliente = @Cliente,
-	FechaNacimiento = @FechaNacimiento,
+	set 
 	Saldo = @Saldo,
-	@Puntos = @Puntos
+	Puntos = @Puntos
 	where DNI = @DNI;
-RETURN 0
+END
+GO

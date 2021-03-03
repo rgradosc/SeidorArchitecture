@@ -5,9 +5,8 @@
 	@Saldo money,
 	@Puntos int
 AS
-	set nocount on;
-
+BEGIN
 	insert into dbo.[Customers](DNI, Cliente, FechaNacimiento, Saldo, Puntos)
 	values (@DNI, @Cliente, @FechaNacimiento, @Saldo, @Puntos);
-
-RETURN 0
+END 
+GO
