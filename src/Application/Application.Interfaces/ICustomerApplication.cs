@@ -9,13 +9,13 @@ namespace SeidorArchitecture.ECommerce.Application.Interfaces
     {
         #region Metodos sincronos
 
-        Response<bool> Insert(CustomerDTO customerDTO);
+        Response<bool> Insert(AddCustomerDTO addCustomerDTO);
 
-        Response<bool> Update(CustomerDTO customerDTO);
+        Response<bool> Update(CreditCustomerDTO creditCustomerDTO);
 
-        Response<bool> Delete(string customerId);
+        Response<bool> Delete(string dni);
 
-        Response<CustomerDTO> Get(string customerId);
+        Response<CustomerDTO> Get(string dni);
 
         Response<IEnumerable<CustomerDTO>> GetAll();
 
@@ -23,13 +23,13 @@ namespace SeidorArchitecture.ECommerce.Application.Interfaces
 
         #region Metodos asincronos
 
-        Task<Response<bool>> InsertAsync(CustomerDTO customerDTO);
+        Task<Response<bool>> InsertAsync(AddCustomerDTO addCustomerDTO);
 
-        Task<Response<bool>> UpdateAsync(CustomerDTO customerDTO);
+        Task<Response<bool>> UpdateAsync(CreditCustomerDTO creditCustomerDTO);
 
-        Task<Response<bool>> DeleteAsync(string customerId);
+        Task<Response<bool>> DeleteAsync(string dni);
 
-        Task<Response<CustomerDTO>> GetAsync(string customerId);
+        Task<Response<CustomerDTO>> GetAsync(string dni);
 
         Task<Response<IEnumerable<CustomerDTO>>> GetAllAsync();
 

@@ -21,13 +21,13 @@ namespace SeidorArchitecture.ECommerce.Application.Main
             this.mapper = mapper;
         }
 
-        public Response<CustomerDTO> Get(string customerId)
+        public Response<CustomerDTO> Get(string dni)
         {
             var response = new Response<CustomerDTO>();
 
             try
             {
-                var customer = domain.Get(customerId);
+                var customer = domain.Get(dni);
                 response.Data = mapper.Map<CustomerDTO>(customer);
 
                 if (response.Data != null)
@@ -67,13 +67,13 @@ namespace SeidorArchitecture.ECommerce.Application.Main
             return response;
         }
 
-        public Response<bool> Insert(CustomerDTO customerDTO)
+        public Response<bool> Insert(AddCustomerDTO addCustomerDTO)
         {
             var response = new Response<bool>();
 
             try
             {
-                var customer = mapper.Map<Customer>(customerDTO);
+                var customer = mapper.Map<Customer>(addCustomerDTO);
                 response.Data = domain.Insert(customer);
 
                 if (response.Data)
@@ -90,13 +90,13 @@ namespace SeidorArchitecture.ECommerce.Application.Main
             return response;
         }
 
-        public Response<bool> Update(CustomerDTO customerDTO)
+        public Response<bool> Update(CreditCustomerDTO creditCustomerDTO)
         {
             var response = new Response<bool>();
 
             try
             {
-                var customer = mapper.Map<Customer>(customerDTO);
+                var customer = mapper.Map<Customer>(creditCustomerDTO);
                 response.Data = domain.Update(customer);
 
                 if (response.Data)
@@ -113,13 +113,13 @@ namespace SeidorArchitecture.ECommerce.Application.Main
             return response;
         }
 
-        public Response<bool> Delete(string customerId)
+        public Response<bool> Delete(string dni)
         {
             var response = new Response<bool>();
 
             try
             {
-                response.Data = domain.Delete(customerId);
+                response.Data = domain.Delete(dni);
 
                 if (response.Data)
                 {
@@ -135,13 +135,13 @@ namespace SeidorArchitecture.ECommerce.Application.Main
             return response;
         }
 
-        public async Task<Response<CustomerDTO>> GetAsync(string customerId)
+        public async Task<Response<CustomerDTO>> GetAsync(string dni)
         {
             var response = new Response<CustomerDTO>();
 
             try
             {
-                var customer = await domain.GetAsync(customerId);
+                var customer = await domain.GetAsync(dni);
                 response.Data = mapper.Map<CustomerDTO>(customer);
 
                 if (response.Data != null)
@@ -181,13 +181,13 @@ namespace SeidorArchitecture.ECommerce.Application.Main
             return response;
         }
 
-        public async Task<Response<bool>> InsertAsync(CustomerDTO customerDTO)
+        public async Task<Response<bool>> InsertAsync(AddCustomerDTO addCustomerDTO)
         {
             var response = new Response<bool>();
 
             try
             {
-                var customer = mapper.Map<Customer>(customerDTO);
+                var customer = mapper.Map<Customer>(addCustomerDTO);
                 response.Data = await domain.InsertAsync(customer);
 
                 if (response.Data)
@@ -204,13 +204,13 @@ namespace SeidorArchitecture.ECommerce.Application.Main
             return response;
         }
 
-        public async Task<Response<bool>> UpdateAsync(CustomerDTO customerDTO)
+        public async Task<Response<bool>> UpdateAsync(CreditCustomerDTO creditCustomerDTO)
         {
             var response = new Response<bool>();
 
             try
             {
-                var customer = mapper.Map<Customer>(customerDTO);
+                var customer = mapper.Map<Customer>(creditCustomerDTO);
                 response.Data = await domain.UpdateAsync(customer);
 
                 if (response.Data)
@@ -227,13 +227,13 @@ namespace SeidorArchitecture.ECommerce.Application.Main
             return response;
         }
 
-        public async Task<Response<bool>> DeleteAsync(string customerId)
+        public async Task<Response<bool>> DeleteAsync(string dni)
         {
             var response = new Response<bool>();
 
             try
             {
-                response.Data = await domain.DeleteAsync(customerId);
+                response.Data = await domain.DeleteAsync(dni);
 
                 if (response.Data)
                 {
