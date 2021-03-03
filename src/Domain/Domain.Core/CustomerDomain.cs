@@ -3,6 +3,7 @@ using SeidorArchitecture.ECommerce.Domain.Interfaces;
 using SeidorArchitecture.ECommerce.Infrastructure.Interfaces;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using System;
 
 namespace SeidorArchitecture.ECommerce.Domain.Core
 {
@@ -47,6 +48,17 @@ namespace SeidorArchitecture.ECommerce.Domain.Core
 
         public bool Insert(Customer customer)
         {
+            var edad = DateTime.Now.Year - customer.FechaNacimiento.Year;
+
+            if (edad <= 40)
+            {
+                customer.Puntos = 1000;
+            }
+            else
+            {
+                customer.Puntos = 100;
+            }
+
             return repository.Insert(customer);
         }
 
