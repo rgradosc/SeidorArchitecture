@@ -146,8 +146,6 @@ namespace SeidorArchitecture.ECommerce.Infrastructure.Repository
             {
                 var p = new DynamicParameters();
                 p.Add("@DNI", customer.DNI);
-                p.Add("@Cliente", customer.Cliente);
-                p.Add("@FechaNacimiento", customer.FechaNacimiento);
                 p.Add("@Saldo", customer.Saldo);
                 p.Add("@Puntos", customer.Puntos);
 
