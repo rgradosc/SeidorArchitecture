@@ -81,6 +81,7 @@ namespace UI.WinForms
             // 
             // fecchaNacimientoDateTime
             // 
+            this.fecchaNacimientoDateTime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.fecchaNacimientoDateTime.Location = new System.Drawing.Point(182, 144);
             this.fecchaNacimientoDateTime.Name = "fecchaNacimientoDateTime";
             this.fecchaNacimientoDateTime.Size = new System.Drawing.Size(218, 26);
@@ -94,6 +95,7 @@ namespace UI.WinForms
             this.guardarButton.TabIndex = 6;
             this.guardarButton.Text = "Guardar";
             this.guardarButton.UseVisualStyleBackColor = true;
+            this.guardarButton.Click += new System.EventHandler(this.guardarButton_Click);
             // 
             // AddCustomerForm
             // 
@@ -107,6 +109,7 @@ namespace UI.WinForms
             this.Controls.Add(this.label2);
             this.Controls.Add(this.documentoIdentidadText);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.Name = "AddCustomerForm";
             this.Text = "Registrar Clientes";
             this.ResumeLayout(false);

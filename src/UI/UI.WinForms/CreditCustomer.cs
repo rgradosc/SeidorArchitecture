@@ -8,29 +8,28 @@ using System.Windows.Forms;
 
 namespace UI.WinForms
 {
-    public partial class AddCustomerForm : Form
+    public partial class CreditCustomerForm : Form
     {
         private const string apiURL = "http://localhost:55168/api";
         private readonly HttpClient httpClient;
-        public AddCustomerForm()
+        public CreditCustomerForm()
         {
             InitializeComponent();
 
             httpClient = new HttpClient();
         }
 
-        private async void guardarButton_Click(object sender, EventArgs e)
+        private async void abonoButton_Click(object sender, EventArgs e)
         {
-            var addCustomerDTO = new AddCustomerDTO()
+            var addCustomerDTO = new CreditCustomerDTO()
             {
-                Cliente = nombreClienteText.Text,
+                Abono = Convert.ToDouble(montoAbonoText.Text),
                 DNI = documentoIdentidadText.Text,
-                FechaNacimiento = fecchaNacimientoDateTime.Value,
             };
 
             var json = JsonConvert.SerializeObject(addCustomerDTO);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
-            HttpResponseMessage httpResponse = await httpClient.PostAsync($"{apiURL}/customers/postAsync", content);
+            HttpResponseMessage httpResponse = await httpClient.PutAsync($"{apiURL}/customers/putAsync", content);
 
             Response<bool> response = await httpResponse.Content.ReadAsAsync<Response<bool>>();
 
