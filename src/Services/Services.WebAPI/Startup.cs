@@ -1,10 +1,8 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using SeidorArchitecture.ECommerce.Application.Interfaces;
 using SeidorArchitecture.ECommerce.Application.Main;
 using SeidorArchitecture.ECommerce.Domain.Core;
@@ -14,10 +12,7 @@ using SeidorArchitecture.ECommerce.Infrastructure.Interfaces;
 using SeidorArchitecture.ECommerce.Infrastructure.Repository;
 using SeidorArchitecture.ECommerce.Transversal.Common;
 using SeidorArchitecture.ECommerce.Transversal.Mapper;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Services.WebAPI.Modules.Swagger;
 
 namespace Services.WebAPI
 {
@@ -34,6 +29,8 @@ namespace Services.WebAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddAutoMapper(x => x.AddProfile(new AutoMapperProfile()));
+
+            services.AddSwagger();
 
             services.AddSingleton<IConfiguration>(Configuration);
 
@@ -56,6 +53,13 @@ namespace Services.WebAPI
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(config =>
+            {
+                config.SwaggerEndpoint("/swagger/v1/swagger.json", "Seidor API Market v1");
+            });
 
             app.UseRouting();
 

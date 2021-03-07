@@ -16,8 +16,8 @@ namespace Services.WebAPI.Controllers
             this.application = application;
         }
 
-        [HttpGet("get")]
-        public IActionResult Get()
+        [HttpGet("getAll")]
+        public IActionResult GetAll()
         {
             var response = application.GetAll();
 
@@ -101,8 +101,8 @@ namespace Services.WebAPI.Controllers
             return BadRequest(response.Message);
         }
 
-        [HttpGet("getAsync")]
-        public async Task<IActionResult> GetAsync()
+        [HttpGet("getAllAsync")]
+        public async Task<IActionResult> GetAllAsync()
         {
             var response = await application.GetAllAsync();
 
