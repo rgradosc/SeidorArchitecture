@@ -1,6 +1,6 @@
 ﻿using System.Data;
 
-namespace SeidorArchitecture.ECommerce.Transversal.Common
+namespace SeidorArchitecture.DigitalB89.Transversal.Common
 {
     public interface IConnectionFactory
     {

@@ -1,9 +1,9 @@
-﻿using SeidorArchitecture.ECommerce.Application.DTO;
-using SeidorArchitecture.ECommerce.Transversal.Common;
+﻿using SeidorArchitecture.DigitalB89.Application.DTO;
+using SeidorArchitecture.DigitalB89.Transversal.Common;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace SeidorArchitecture.ECommerce.Application.Interfaces
+namespace SeidorArchitecture.DigitalB89.Application.Interfaces
 {
     public interface ICustomerApplication
     {

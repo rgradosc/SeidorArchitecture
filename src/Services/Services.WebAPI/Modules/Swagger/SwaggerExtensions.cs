@@ -2,7 +2,7 @@
 using Microsoft.OpenApi.Models;
 using System;
 
-namespace Services.WebAPI.Modules.Swagger
+namespace SeidorArchitecture.DigitalB89.Services.WebAPI.Modules.Swagger
 {
     public static class SwaggerExtensions
     {

@@ -1,11 +1,11 @@
-﻿using SeidorArchitecture.ECommerce.Domain.Entity;
-using SeidorArchitecture.ECommerce.Domain.Interfaces;
-using SeidorArchitecture.ECommerce.Infrastructure.Interfaces;
+﻿using SeidorArchitecture.DigitalB89.Domain.Entity;
+using SeidorArchitecture.DigitalB89.Domain.Interfaces;
+using SeidorArchitecture.DigitalB89.Infrastructure.Interfaces;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System;
 
-namespace SeidorArchitecture.ECommerce.Domain.Core
+namespace SeidorArchitecture.DigitalB89.Domain.Core
 {
     public class CustomerDomain : ICustomerDomain
     {

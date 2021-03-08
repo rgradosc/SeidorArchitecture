@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>SeidorArchitecture.DigitalB89.Services.WebAPI</AssemblyName>
+    <RootNamespace>SeidorArchitecture.DigitalB89.Services.WebAPI</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

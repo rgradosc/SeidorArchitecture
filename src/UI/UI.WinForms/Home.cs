@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace UI.WinForms
+namespace SeidorArchitecture.DigitalB89.UI.WinForms
 {
     public partial class HomeForm : Form
     {

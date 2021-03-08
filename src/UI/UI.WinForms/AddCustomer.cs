@@ -1,12 +1,12 @@
-﻿using SeidorArchitecture.ECommerce.Application.DTO;
-using SeidorArchitecture.ECommerce.Transversal.Common;
+﻿using SeidorArchitecture.DigitalB89.Application.DTO;
+using SeidorArchitecture.DigitalB89.Transversal.Common;
 using Newtonsoft.Json;
 using System;
 using System.Text;
 using System.Net.Http;
 using System.Windows.Forms;
 
-namespace UI.WinForms
+namespace SeidorArchitecture.DigitalB89.UI.WinForms
 {
     public partial class AddCustomerForm : Form
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SeidorArchitecture.ECommerce.Domain.Entity
+namespace SeidorArchitecture.DigitalB89.Domain.Entity
 {
     public class Customer
     {

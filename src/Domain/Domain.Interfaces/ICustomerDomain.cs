@@ -1,8 +1,8 @@
-﻿using SeidorArchitecture.ECommerce.Domain.Entity;
+﻿using SeidorArchitecture.DigitalB89.Domain.Entity;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace SeidorArchitecture.ECommerce.Domain.Interfaces
+namespace SeidorArchitecture.DigitalB89.Domain.Interfaces
 {
     public interface ICustomerDomain
     {

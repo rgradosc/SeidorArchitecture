@@ -1,10 +1,10 @@
-﻿using SeidorArchitecture.ECommerce.Transversal.Common;
+﻿using SeidorArchitecture.DigitalB89.Transversal.Common;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace SeidorArchitecture.ECommerce.Infrastructure.Data
+namespace SeidorArchitecture.DigitalB89.Infrastructure.Data
 {
     public class ConnectionFactory : IConnectionFactory
     {

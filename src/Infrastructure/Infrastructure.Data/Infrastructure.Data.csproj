@@ -1,9 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>SeidorArchitecture.ECommerce.Infrastructure.Data</AssemblyName>
-    <RootNamespace>SeidorArchitecture.ECommerce.Infrastructure.Data</RootNamespace>
+    <AssemblyName>SeidorArchitecture.DigitalB89.Infrastructure.Data</AssemblyName>
+    <RootNamespace>SeidorArchitecture.DigitalB89.Infrastructure.Data</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

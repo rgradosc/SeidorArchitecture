@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>SeidorArchitecture.ECommerce.Transversal.Common</AssemblyName>
-    <RootNamespace>SeidorArchitecture.ECommerce.Transversal.Common</RootNamespace>
+    <AssemblyName>SeidorArchitecture.DigitalB89.Transversal.Common</AssemblyName>
+    <RootNamespace>SeidorArchitecture.DigitalB89.Transversal.Common</RootNamespace>
   </PropertyGroup>
 
 </Project>

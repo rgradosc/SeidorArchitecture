@@ -1,14 +1,14 @@
-﻿using SeidorArchitecture.ECommerce.Application.DTO;
-using SeidorArchitecture.ECommerce.Application.Interfaces;
-using SeidorArchitecture.ECommerce.Domain.Entity;
-using SeidorArchitecture.ECommerce.Domain.Interfaces;
-using SeidorArchitecture.ECommerce.Transversal.Common;
+﻿using SeidorArchitecture.DigitalB89.Application.DTO;
+using SeidorArchitecture.DigitalB89.Application.Interfaces;
+using SeidorArchitecture.DigitalB89.Domain.Entity;
+using SeidorArchitecture.DigitalB89.Domain.Interfaces;
+using SeidorArchitecture.DigitalB89.Transversal.Common;
 using AutoMapper;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System;
 
-namespace SeidorArchitecture.ECommerce.Application.Main
+namespace SeidorArchitecture.DigitalB89.Application.Main
 {
     public class CustomerApplication : ICustomerApplication
     {

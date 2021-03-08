@@ -4,6 +4,8 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
+    <AssemblyName>SeidorArchitecture.DigitalB89.UI.WinForms</AssemblyName>
+    <RootNamespace>SeidorArchitecture.DigitalB89.UI.WinForms</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

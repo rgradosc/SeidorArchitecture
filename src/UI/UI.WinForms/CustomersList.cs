@@ -1,15 +1,10 @@
-﻿using SeidorArchitecture.ECommerce.Application.DTO;
-using SeidorArchitecture.ECommerce.Transversal.Common;
-using Newtonsoft.Json;
-using System;
-using System.Text;
+﻿using SeidorArchitecture.DigitalB89.Application.DTO;
+using SeidorArchitecture.DigitalB89.Transversal.Common;
 using System.Net.Http;
 using System.Windows.Forms;
-using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
 
-namespace UI.WinForms
+namespace SeidorArchitecture.DigitalB89.UI.WinForms
 {
     public partial class CustomersListForm : Form
     {

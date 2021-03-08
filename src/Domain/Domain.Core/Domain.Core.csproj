@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>SeidorArchitecture.ECommerce.Domain.Core</AssemblyName>
-    <RootNamespace>SeidorArchitecture.ECommerce.Domain.Core</RootNamespace>
+    <AssemblyName>SeidorArchitecture.DigitalB89.Domain.Core</AssemblyName>
+    <RootNamespace>SeidorArchitecture.DigitalB89.Domain.Core</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

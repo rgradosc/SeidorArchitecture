@@ -1,20 +1,20 @@
+using SeidorArchitecture.DigitalB89.Application.Interfaces;
+using SeidorArchitecture.DigitalB89.Application.Main;
+using SeidorArchitecture.DigitalB89.Domain.Core;
+using SeidorArchitecture.DigitalB89.Domain.Interfaces;
+using SeidorArchitecture.DigitalB89.Infrastructure.Data;
+using SeidorArchitecture.DigitalB89.Infrastructure.Interfaces;
+using SeidorArchitecture.DigitalB89.Infrastructure.Repository;
+using SeidorArchitecture.DigitalB89.Transversal.Common;
+using SeidorArchitecture.DigitalB89.Transversal.Mapper;
+using SeidorArchitecture.DigitalB89.Services.WebAPI.Modules.Swagger;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using SeidorArchitecture.ECommerce.Application.Interfaces;
-using SeidorArchitecture.ECommerce.Application.Main;
-using SeidorArchitecture.ECommerce.Domain.Core;
-using SeidorArchitecture.ECommerce.Domain.Interfaces;
-using SeidorArchitecture.ECommerce.Infrastructure.Data;
-using SeidorArchitecture.ECommerce.Infrastructure.Interfaces;
-using SeidorArchitecture.ECommerce.Infrastructure.Repository;
-using SeidorArchitecture.ECommerce.Transversal.Common;
-using SeidorArchitecture.ECommerce.Transversal.Mapper;
-using Services.WebAPI.Modules.Swagger;
 
-namespace Services.WebAPI
+namespace SeidorArchitecture.DigitalB89.Services.WebAPI
 {
     public class Startup
     {

@@ -1,4 +1,4 @@
-﻿namespace SeidorArchitecture.ECommerce.Transversal.Common
+﻿namespace SeidorArchitecture.DigitalB89.Transversal.Common
 {
     public class Response<T>
     {

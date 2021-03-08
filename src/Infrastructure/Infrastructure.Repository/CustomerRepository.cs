@@ -1,12 +1,12 @@
-﻿using SeidorArchitecture.ECommerce.Transversal.Common;
-using SeidorArchitecture.ECommerce.Infrastructure.Interfaces;
-using SeidorArchitecture.ECommerce.Domain.Entity;
+﻿using SeidorArchitecture.DigitalB89.Transversal.Common;
+using SeidorArchitecture.DigitalB89.Infrastructure.Interfaces;
+using SeidorArchitecture.DigitalB89.Domain.Entity;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Dapper;
 using System.Data;
 
-namespace SeidorArchitecture.ECommerce.Infrastructure.Repository
+namespace SeidorArchitecture.DigitalB89.Infrastructure.Repository
 {
     public class CustomerRepository : ICustomerRepository
     {

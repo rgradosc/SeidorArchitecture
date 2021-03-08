@@ -1,8 +1,8 @@
-﻿using SeidorArchitecture.ECommerce.Domain.Entity;
-using SeidorArchitecture.ECommerce.Application.DTO;
+﻿using SeidorArchitecture.DigitalB89.Domain.Entity;
+using SeidorArchitecture.DigitalB89.Application.DTO;
 using AutoMapper;
 
-namespace SeidorArchitecture.ECommerce.Transversal.Mapper
+namespace SeidorArchitecture.DigitalB89.Transversal.Mapper
 {
     public class AutoMapperProfile : Profile
     {

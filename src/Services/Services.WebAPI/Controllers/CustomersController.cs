@@ -1,9 +1,9 @@
-﻿using SeidorArchitecture.ECommerce.Application.DTO;
-using SeidorArchitecture.ECommerce.Application.Interfaces;
+﻿using SeidorArchitecture.DigitalB89.Application.DTO;
+using SeidorArchitecture.DigitalB89.Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
-namespace Services.WebAPI.Controllers
+namespace SeidorArchitecture.DigitalB89.Services.WebAPI.Controllers
 {
     [Route("api/[controller]/")]
     [ApiController]

@@ -1,5 +1,5 @@
 ﻿
-namespace UI.WinForms
+namespace SeidorArchitecture.DigitalB89.UI.WinForms
 {
     partial class HomeForm
     {

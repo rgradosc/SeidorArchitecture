@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>SeidorArchitecture.ECommerce.Transversal.Mapper</AssemblyName>
-    <RootNamespace>SeidorArchitecture.ECommerce.Transversal.Mapper</RootNamespace>
+    <AssemblyName>SeidorArchitecture.DigitalB89.Transversal.Mapper</AssemblyName>
+    <RootNamespace>SeidorArchitecture.DigitalB89.Transversal.Mapper</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

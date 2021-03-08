@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>SeidorArchitecture.ECommerce.Application.DTO</AssemblyName>
-    <RootNamespace>SeidorArchitecture.ECommerce.Application.DTO</RootNamespace>
+    <AssemblyName>SeidorArchitecture.DigitalB89.Application.DTO</AssemblyName>
+    <RootNamespace>SeidorArchitecture.DigitalB89.Application.DTO</RootNamespace>
   </PropertyGroup>
 
 </Project>

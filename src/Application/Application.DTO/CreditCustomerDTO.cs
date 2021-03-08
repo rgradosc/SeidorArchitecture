@@ -1,4 +1,4 @@
-﻿namespace SeidorArchitecture.ECommerce.Application.DTO
+﻿namespace SeidorArchitecture.DigitalB89.Application.DTO
 {
     public class CreditCustomerDTO
     {
